@@ -1,0 +1,6 @@
+%h1 Comments under #{@post.title}
+%br
+= link_to "Add New Comment", new_post_comment_path(@post.id)
+%br
+- @comments.each do |comment|
+  = comment.body
